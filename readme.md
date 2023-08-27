@@ -14,3 +14,10 @@
 * E incluir o methods necessários (GET,POST,PUT,DELETE)
     
 
+** objetivo:
+    * Fazer um crud
+        *Read registros
+        *Read registro
+        *Create registro
+        *Update registro
+        *Delete registro
