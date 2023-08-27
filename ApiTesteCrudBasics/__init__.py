@@ -1,24 +1,23 @@
+#ParteDoAzure
 import logging
-
 import azure.functions as func
 
+#para lidar com arquivos e infos de ambiente
+import os
+import sys
 
-def main(req: func.HttpRequest) -> func.HttpResponse:
-    logging.info('Python HTTP trigger function processed a request.')
+#buscar o aquivo .env
+from dotenv import load_dotenv
 
-    name = req.params.get('name')
-    if not name:
-        try:
-            req_body = req.get_json()
-        except ValueError:
-            pass
-        else:
-            name = req_body.get('name')
+import pymongo
+import fastapi
+from pydantic import BaseModel
 
-    if name:
-        return func.HttpResponse(f"Hello, {name}. This HTTP triggered function executed successfully.")
-    else:
-        return func.HttpResponse(
-             "This HTTP triggered function executed successfully. Pass a name in the query string or in the request body for a personalized response.",
-             status_code=200
-        )
+app = fastapi.FastAPI()
+
+async def main(req: func.HttpRequest,context: func.Context) -> func.HttpResponse:
+    return await func.AsgiMiddleware(app).handle_async(req,context)
+
+@app.get("/teste")
+async def teste():
+    return "opa"
