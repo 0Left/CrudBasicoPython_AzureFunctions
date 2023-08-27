@@ -9,13 +9,12 @@ import sys
 #buscar o aquivo .env
 from dotenv import load_dotenv
 
-#oq eu vou usar de importante
-import pymongo
 import fastapi
-from pydantic import BaseModel
 
 #Importar os "router's" para deixar mais organizado
-from ApiTesteCrudBasics.router.router import router
+from ApiTesteCrudBasics.router.get import get_router
+from ApiTesteCrudBasics.router.put import put_router
+from ApiTesteCrudBasics.router.delete import delete_router
 
 #Cria o brabo
 app = fastapi.FastAPI()
@@ -28,4 +27,6 @@ async def main(req: func.HttpRequest,context: func.Context) -> func.HttpResponse
 async def teste():
     return "opa"
 #Adicionando um roteador
-app.include_router(router)
+app.include_router(get_router)
+app.include_router(put_router)
+app.include_router(delete_router)
