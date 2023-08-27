@@ -6,7 +6,7 @@
     * Pydantic - pra verificação de modelo Json (pelo que entendi)
     * Pymongo - Conecta com o azureMongoDB
 --
-* Bota na .env a string de conecxão com o DB
+* Bota na .env a string de conexão com o DB
 * Dentro da function.json atualizar o route pra "/{*route}"
 * Dentro do host.json adicionar:
     * "extensions":{"http":{"routePrefix":""}}
