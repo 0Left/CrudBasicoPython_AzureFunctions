@@ -2,7 +2,7 @@
 import logging
 import azure.functions as func
 
-from fastapi import FastAPI,Request
+from fastapi import FastAPI
 
 #Importar os "router's" para deixar mais organizado
 from ApiTesteCrudBasics.router.get import get_router
