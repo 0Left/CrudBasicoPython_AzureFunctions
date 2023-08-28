@@ -1,3 +1,7 @@
+# Me teste
+(no bom sentido)
+https://pyhttpcrud.azurewebsites.net
+
 # Anotações para quando eu copiar isso no futuro:
 * __init__.py é o script central, ele vai ser o "main", ele vai centralizar o roteamento
 * pip install -r requirements.txt
