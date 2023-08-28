@@ -2,7 +2,7 @@
 import logging
 import azure.functions as func
 
-import fastapi
+from fastapi import FastAPI,Request
 
 #Importar os "router's" para deixar mais organizado
 from ApiTesteCrudBasics.router.get import get_router
@@ -10,7 +10,8 @@ from ApiTesteCrudBasics.router.put import put_router
 from ApiTesteCrudBasics.router.delete import delete_router
 
 #Cria o brabo
-app = fastapi.FastAPI()
+app = FastAPI()
+
 
 #Importante para o AzureFunctions
 async def main(req: func.HttpRequest,context: func.Context) -> func.HttpResponse:
