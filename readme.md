@@ -18,7 +18,7 @@ https://pyhttpcrud.azurewebsites.net
 * E incluir o methods necessários (GET,POST,PUT,DELETE)
     
 
-** objetivo:
+# objetivo:
     * Fazer um crud
         *Read registros
         *Read registro
@@ -26,7 +26,7 @@ https://pyhttpcrud.azurewebsites.net
         *Update registro
         *Delete registro
 
-** Resultado:
+# Resultado:
     * Fiz um crud
 
 # ToDo:
