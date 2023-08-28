@@ -2,13 +2,6 @@
 import logging
 import azure.functions as func
 
-#para lidar com arquivos e infos de ambiente
-import os
-import sys
-
-#buscar o aquivo .env
-from dotenv import load_dotenv
-
 import fastapi
 
 #Importar os "router's" para deixar mais organizado
@@ -22,11 +15,8 @@ app = fastapi.FastAPI()
 #Importante para o AzureFunctions
 async def main(req: func.HttpRequest,context: func.Context) -> func.HttpResponse:
     return await func.AsgiMiddleware(app).handle_async(req,context)
-#adicionando uma rota
-@app.get("/teste")
-async def teste():
-    return "opa"
-#Adicionando um roteador
+
+#Adicionando roteadores
 app.include_router(get_router)
 app.include_router(put_router)
 app.include_router(delete_router)
