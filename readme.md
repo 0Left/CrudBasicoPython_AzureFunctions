@@ -19,15 +19,14 @@ https://pyhttpcrud.azurewebsites.net
     
 
 # objetivo:
-    * Fazer um crud
-        *Read registros
-        *Read registro
-        *Create registro
-        *Update registro
-        *Delete registro
+* Fazer um crud
+    * Read registros
+    * Read registro 
+    * Create/Update registro
+    * Delete registro
 
 # Resultado:
-    * Fiz um crud
+* Fiz um crud
 
 # ToDo:
-* separar o put em 2, para ter caminho de registro e update separado.
+* separar o put em 2 (1 put, 1 post), para ter caminho de registro e update separado.
