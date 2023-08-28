@@ -3,7 +3,7 @@
 * pip install -r requirements.txt
 * vou usar:
     * FastApi - Pra base de tudo
-    * Pydantic - pra verificação de modelo Json (pelo que entendi)
+    * Pydantic - pra verificação de modelo Json (pelo que entendi(pelo visto n entendi))
     * Pymongo - Conecta com o azureMongoDB
 --
 * Bota na .env a string de conexão com o DB
@@ -21,3 +21,9 @@
         *Create registro
         *Update registro
         *Delete registro
+
+** Resultado:
+    * Fiz um crud
+
+# ToDo:
+* separar o put em 2, para ter caminho de registro e update separado.
