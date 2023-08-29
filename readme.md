@@ -27,6 +27,6 @@ https://pyhttpcrud.azurewebsites.net
 
 # Resultado:
 * Fiz um crud
-![Alt text](https://i.imgur.com/zI9Ndyv.png)
+![Alt text](https://i.imgur.com/0L2i2gW.png)
 # ToDo:
 * separar o put em 2 (1 put, 1 post), para ter caminho de registro e update separado.
