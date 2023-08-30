@@ -12,5 +12,9 @@ def load_connection():
 def get_collection():
     client = load_connection()
     return client.get_database("baseCollection").get_collection("baseCollection")
-
+def load_chave_acesso():
+    load_dotenv()
+    return os.environ.get("chaveAcesso")
 basicCollection = get_collection()
+chave_acesso = load_chave_acesso()
+

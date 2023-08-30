@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 from pydantic import BaseModel
-from ApiTesteCrudBasics.modules.connectDB import basicCollection
+from ApiTesteCrudBasics.modules.connectDB import basicCollection,chave_acesso
 
 from dotenv import load_dotenv
 import os
@@ -12,7 +12,7 @@ class DeleteModel(BaseModel):
 
 @delete_router.delete("/registro")
 def get_registro(delete_model : DeleteModel):
-    if(delete_model.chaveAcesso == load_chave_acesso()):
+    if(delete_model.chaveAcesso == chave_acesso):
         deletado = basicCollection.find_one_and_delete({"idKey":delete_model.email},projection={"_id":False})
         if(deletado):
             return f"Registro deletado: {deletado}"
@@ -24,6 +24,4 @@ def get_registro(delete_model : DeleteModel):
 
 
 
-def load_chave_acesso():
-    load_dotenv()
-    return os.environ.get("chaveAcesso")
+
